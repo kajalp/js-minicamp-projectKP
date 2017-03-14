@@ -16,8 +16,8 @@ function areSameLength(str1, str2) {
   //return true if the two strings have the same length
   //otherwise return false
   //code here
-  var num1 = length(str1);
-  var num2 = length(str2);
+  var num1 = str1.length;
+  var num2 = str2.length;
   if(num1 === num2)
   {
     return true;
@@ -51,7 +51,7 @@ function greaterThanFifty(num) {
   //return true if num is greater than fifty
   //otherwise return false
   //code here
-  if(num1>50)
+  if(num>50)
   {
     return true;
   }
@@ -113,19 +113,19 @@ function isOdd(num) {
 function square(num) {
   //square num and return the new value
   //code here
-  return (Math.power(num,2));
+  return (Math.pow(num,2));
 }
 
 function cube(num) {
   //cube num and return the new value
   //code here
-  return (Math.power(num,3));
+  return (Math.pow(num,3));
 }
 
 function raiseToPower(num, exponent) {
   //raise num to whatever power is passed in as exponent
   //code here
-  return (Math.power(num,exponent));
+  return (Math.pow(num,exponent));
 }
 
 function roundNumber(num) {
@@ -137,7 +137,7 @@ function roundNumber(num) {
 function roundUp(num) {
   //round num up and return it
   //code here
-  return (Math.roundUp(num));
+  return (Math.ceil(num));
 
 }
 
@@ -145,7 +145,8 @@ function addExclamationPoint(str) {
   //add an exclamation point to the end of str and return the new string
   //'hello world' -> 'hello world!'
   //code here
-  return (str+'!');
+  var exclaim = str+'!';
+  return (exclaim);
 }
 
 function combineNames(firstName, lastName) {
@@ -159,7 +160,7 @@ function getGreeting(name) {
   //Take the name string and concatenate other strings onto it so it takes the following form:
   //'Sam' -> 'Hello Sam!'
   //code here
-  return ('Hello '+name);
+  return ('Hello '+name+'!');
 }
 
 //If you can't remember these area formulas then head over to Google or look at the test code.
@@ -173,13 +174,13 @@ function getRectangleArea(length, width) {
 function getTriangleArea(base, height) {
   //return the area of the triangle by using base and height
   //code here
-  retunr(0.5*base*height);
+  return(0.5*base*height);
 }
 
 function getCircleArea(radius) {
   //return the rounded area of the circle given the radius
   //code here
-  return((Math.Pi)*(Math.power(radius,2)));
+  return(Math.round((Math.PI)*(Math.pow(radius,2))));
 }
 
 function getRectangularPrismVolume(length, width, height) {
